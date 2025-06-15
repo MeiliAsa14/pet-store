@@ -1,9 +1,15 @@
+/* General Body Styles */
 body {
     font-family: 'Courier New', Courier, monospace, sans-serif;
     margin: 0;
     padding: 0;
     text-align: center;
+    background-color: #e8f5fd; /* Very light blue background */
+    color: #333; /* Dark gray text */
+    scroll-behavior: smooth;
 }
+
+/* Header Styles */
 header {
     background-color: #5dade2; /* Example: your header background */
     color: white; /* Example: text color */
@@ -13,6 +19,17 @@ header {
 
 header h1 {
     margin-bottom: 10px; /* Space below the heading */
+    font-size: 2.5em;
+    color: white;
+}
+
+/* Navigation Styles */
+nav {
+    margin: 20px 0; /* Space above and below the nav */
+}
+
+nav a:hover {
+    color: #BBDEFB; /* Lighter blue on hover for nav links */
 }
 
 header nav ul {
@@ -29,14 +46,29 @@ header nav ul a {
     display: inline-block; /* Make links behave like blocks for padding/margin, but still inline for centering */
 }
 
+/* Main Content Sections */
+
+
+/* Featured Section */
 .featured {
-    margin: 20px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff; /* White background for featured section */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
+/* Pet List Container (Flexbox for pet cards layout) */
 .pet-list {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
+    align-items: stretch;
     gap: 20px;
+    padding: 20px;
 }
+
+
 .pet {
     border: 2px solid #ddd;
     padding: 15px;
@@ -55,13 +87,18 @@ button {
     border: none;
     cursor: pointer;
 }
+/* Button Styles (for Adopt Now) */
 button:hover {
     background-color: #ffffff; 
     color: #57a2d4; /* Change text color on hover */
     border: 1px solid #57a2d4; /* Add border on hover */
 }
 
+
+/* Footer Styles */
 footer {
+    display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
     background-color: #5dade2;
@@ -69,25 +106,141 @@ footer {
     padding: 20px;
     height: 100%; /* Set an explicit height */
 }
+
+footer h2 {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 20px;
+    color: white;
+}
+
 footer .footer-text {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: right;
+    text-align: center; /* Center text in footer */
     /* text-align: left; Removed to avoid conflict with centering */
-    flex: 1;
-    height: 100%;
-    font-size: 15px;
+    
+    }
+
+    .footer-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        gap: 24px;
+    }
+
+    footer .footer-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex: 1;
+        height: 100%;
+        font-size: 15px;
+    }
+
+    .contact-info {
+        text-align: left;
+        flex: 1;
+    }
+
+    .google-map {
+        flex: 1;
+        display: flex;
+        justify-content: flex-end;
+        min-width: 300px;
+        margin-top: 20px;
+    }
+
+    footer iframe {
+        margin-left: 20px;
+        border-radius: 10px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        width: 100%;
+        height: 100%;
+        border: 1px solid #585151;
+    }
+
+    .container {
+        display: flex;
+        gap: 24px;
+        align-items: center;
+        justify-content: center;
+    }
+
+/* Pet Card Styles */
+.pet-card {
+    background-color: #ffffff; /* White background for pet cards */
+    border: 2px solid #ddd; /* Light gray border */
+    border-radius: 10px; /* Rounded corners */
+    padding: 15px; /* Padding inside the card */
+    text-align: center; /* Center text inside the card */
+    width: 300px; /* Fixed width for consistency */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
-footer iframe {
-    margin-left: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+.pet-card img {
+    width: 100%; /* Full width of the card */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Rounded corners for images */
+}
+.pet-card h3 {
+    margin: 10px 0; /* Space above and below the pet name */
+    font-size: 1.5em; /* Larger font size for pet names */
+    color: #333; /* Dark gray color for text */
+}
+.pet-card p {
+    font-size: 1em; /* Standard font size for descriptions */
+    color: #666; /* Lighter gray for description text */
+}
+.pet-card button {
+    background-color: #57a2d4; /* Match header background */
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px; /* Rounded corners for buttons */
+}
+.pet-card button:hover {
+    background-color: #ffffff; /* Change background on hover */
+    color: #57a2d4; /* Change text color on hover */
+    border: 1px solid #57a2d4; /* Add border on hover */
 }
 
-.container {
-    display: flex; 
-    gap: 24px;
-    align-items: 50px;
-    justify-content: center;
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    nav a {
+        margin: 0 8px;
+    }
+
+    .pet-card {
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .contact-info {
+        text-align: center;
+    }
+
+    .google-map {
+        width: 100%;
+        max-width: 400px;
+        margin-top: 20px;
+    }
 }
