@@ -6,6 +6,7 @@
     <title>Pet Store</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <header>
         <h1>Welcome to Our Pet Store</h1>
@@ -17,6 +18,36 @@
         </ul>
         </nav>
     </header>
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+            <img src="/petshop-img/slide1.jpg">
+            <div class="prev" onclick="plusSlides(-1)">❮</div>
+            <div class="next" onclick="plusSlides(1)">❯</div>
+        </div>
+
+        <div class="mySlides fade">
+            <img src="/petshop-img/slide2.png">
+            <div class="prev" onclick="plusSlides(-1)">❮</div>
+            <div class="next" onclick="plusSlides(1)">❯</div>
+        </div>
+
+        <div class="mySlides fade">
+            <img src="/petshop-img/slide3.webp">
+            <div class="prev" onclick="plusSlides(-1)">❮</div>
+            <div class="next" onclick="plusSlides(1)">❯</div>
+        </div>
+
+        <div class="mySlides fade">
+            <img src="/petshop-img/slide4.jpg">
+            <div class="prev" onclick="plusSlides(-1)">❮</div>
+            <div class="next" onclick="plusSlides(1)">❯</div>
+        </div>
+
+        <div style="text-align:center; margin-top: 10px;"> <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+    </div>
     <main>
         <section class="featured">
             <h2>Featured Pets</h2>

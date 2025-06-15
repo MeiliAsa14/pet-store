@@ -244,3 +244,90 @@ footer .footer-text {
         margin-top: 20px;
     }
 }
+
+/* Slideshow container */
+.slideshow-container {
+    position: relative; /* Keep this */
+    margin: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Hide the images by default */
+.mySlides {
+    display: none;
+    /* Make mySlides the positioning context for its children (buttons) */
+    position: relative; 
+    width: 100%; /* Ensure it fills the container */
+    height: 450px; /* Default height for smaller screens */
+    overflow: hidden; /* Important if images are larger than this height */
+}
+
+@media screen and (max-width: 768px) {
+    .mySlides {
+        height: 300px; /* Smaller height for phones */
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .mySlides {
+        height: 600px; /* Taller height for laptop screens */
+    }
+}
+
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute; /* Now absolute relative to .mySlides */
+  top: 50%; 
+  transform: translateY(-50%); /* Perfect vertical centering */
+  width: auto;
+  height: 80px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  user-select: none;
+  z-index: 10; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0,0,0,0.5); /* Make them slightly visible by default */
+}
+
+/* Position the "previous button" to the left */
+.prev {
+  left: 0; /* Stick to the left edge of the .mySlides container */
+  border-radius: 0 9px 9px 0; 
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0; /* Stick to the right edge of the .mySlides container */
+  border-radius: 9px 0 0 9px; 
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+/* Image within the slide */
+.mySlides img{
+    width: 100%; /* Image fills its parent (.mySlides) */
+    height: 100%; /* Image takes full height of its parent (.mySlides) */
+    object-fit: cover; /* Ensures image covers the area, cropping if needed */
+    display: block; /* Removes any extra space below images */
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
