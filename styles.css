@@ -1,0 +1,81 @@
+body {
+    font-family: 'Courier New', Courier, monospace, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+header {
+    background-color: #5dade2;
+    padding: 20px;
+    color: white;
+}
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+.featured {
+    margin: 20px;
+}
+.pet-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.pet {
+    border: 2px solid #ddd;
+    padding: 15px;
+    text-align: center;
+}
+.pet img {
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+}
+button {
+    background-color: #57a2d4; /* Match header background */
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #ffffff; 
+    color: #57a2d4; /* Change text color on hover */
+    border: 1px solid #57a2d4; /* Add border on hover */
+}
+
+footer {
+    justify-content: space-between;
+    align-items: center;
+    background-color: #5dade2;
+    color: white;
+    padding: 20px;
+}
+footer .footer-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex: 1;
+    height: 100%;
+}
+footer .footer-text {
+    text-align: left;
+    flex: 1;
+}
+footer iframe {
+    margin-left: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.container {
+    display: flex; 
+    gap: 24px;
+    align-items: 50px;
+    justify-content: center;
+}
