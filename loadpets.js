@@ -49,24 +49,50 @@ function loadPets() {
 }
 
 
- 
+//Old version of loadPets function
+// function loadPets() {
+//     console.log("Loading pets!")
+//     const petList = document.getElementById("pet-list");
+//     pets.forEach(pet => {
+//         const newPet = document.createElement('div');
+//         newPet.className = 'pet';
+//         newPet.innerHTML =
+//         `
+//         <img src = "${pet.img}" alt = "${pet.name}">
+//         <h3>${pet.name}</h3>
+//         <p>Type: ${pet.type}</p>
+//         <p>Age: ${pet.age}</p>
+//         <button onclick="adoptPet()">Adopt Now</button>
+//         `;
+//         petList.append(newPet)
+//     })
+// }
+
 function loadPets() {
-    console.log("Loading pets!")
-    const petList = document.getElementById("pet-list");
-    pets.forEach(pet => {
-        const newPet = document.createElement('div');
-        newPet.className = 'pet';
-        newPet.innerHTML =
-        `
-        <img src = "${pet.img}" alt = "${pet.name}">
-        <h3>${pet.name}</h3>
-        <p>Type: ${pet.type}</p>
-        <p>Age: ${pet.age}</p>
-        <button onclick="adoptPet()">Adopt Now</button>
-        `;
-        petList.append(newPet)
-    })
+    console.log("Loading pets!");
+    const petList = $("#pet-list");
+    pets.forEach((pet) => {
+    const petItem = $("<div>").addClass("pet").html(`
+      <img src="${pet.img}" alt="${pet.name}">
+      <h3>${pet.name}</h3>
+      <p>Type: ${pet.type}</p>
+      <p>Age: ${pet.age} years</p>
+      <button class="adopt-btn">Adopt Now</button>
+    `);
+    petList.append(petItem);
+  });
+
+  // Attach click handler using event delegation
+  petList.on("click", ".adopt-btn", adoptPet);
+
+  // install event handler for pet type
+  $('input[name="pet-type"]').on("change", function () {
+    // const selectedType = $(this).val();
+    filterPets();
+
+  });
 }
+
 
 document.addEventListener('DOMContentLoaded', loadPets);
 console.log("Pets loaded pawfectly!")
