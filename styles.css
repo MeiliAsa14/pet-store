@@ -126,12 +126,13 @@ footer .footer-text {
 
     .footer-container {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
         align-items: center;
         width: 100%;
         max-width: 1200px;
         margin: 0 auto;
         gap: 24px;
+        flex-wrap: wrap;
     }
 
     footer .footer-text {
@@ -232,6 +233,7 @@ footer .footer-text {
         flex-direction: column;
         align-items: center;
         text-align: center;
+        flex-wrap: wrap;
     }
 
     .contact-info {
