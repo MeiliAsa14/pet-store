@@ -12,66 +12,63 @@ body {
 
 /* Header Styles */
 header {
-    background-color: #5dade2; /* Example: your header background */
-    color: white; /* Example: text color */
-    padding: 1.5em 0; /* Example: padding */
-    text-align: center; /* This is the key property */
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Subtle shadow for better readability */
+    background-color: #5dade2; /* Consistent header blue */
+    color: white;
+    padding: 1.5em 0;
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 header h1 {
-    margin-bottom: 10px; /* Space below the heading */
+    margin-bottom: 10px;
     font-size: 2.8em;
 }
 
-
+/* Navigation Styles */
 nav {
     display: flex;
-    justify-content: center; /* Center the nav horizontally */
-    align-items: center;     /* Vertically center if needed */
-    margin: 20px 0;          /* Increased margin for better spacing */
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
 }
-/* Navigation Styles */
+
 nav ul {
     list-style: none;
-    display: flex; /* Use flexbox for horizontal layout */
-    justify-content: center; /* Center the nav items */
-    align-items: center;     /* Vertically center nav items */
-    gap: 24px;               /* Add space between nav items */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
     margin: 0;
     padding: 0;
 }
 
 nav a {
-    color: white; /* Text color for nav links */
-    text-decoration: none; /* Remove underline */
-    padding: 8px 16px;     /* Larger padding for better click area */
-    border-radius: 5px; /* Rounded corners for links */
-    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+    color: white;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
     font-size: 1.3em;
 }
 
 nav a:hover {
-    background-color: #ffffff; /* Change background on hover */
-    color: #57a2d4; /* Change text color on hover */
+    background-color: #ffffff;
+    color: #57a2d4; /* Consistent hover blue */
 }
 
 /* Main Content Styles */
 main {
-    padding: 20px; /* Padding around the main content */
-    max-width: 1200px; /* Max width for main content */
-    margin: 0 auto; /* Center the main content */
-    background-color: #f0f8ff;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #f0f8ff; /* Light blue */
  } 
-
-
- 
 
 /* Featured Section */
 .featured {
     margin: 20px auto;
     padding: 20px;
-    background-color: #ffffff; /* White background for featured section */
+    background-color: #ffffff;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -86,32 +83,36 @@ main {
     padding: 20px;
 }
 
-
 .pet {
     border: 2px solid #ddd;
     padding: 15px;
     text-align: center;
 }
+
+/* Applying 150x150px to .pet img with !important */
 .pet img {
-    width: 150px;
-    height: 150px;
+    width: 150px !important;
+    height: 150px !important;
     border-radius: 10px;
     object-fit: cover;
 }
+
+/* Button Styles (for Adopt Now) */
 button {
-    background-color: #57a2d4; /* Match header background */
+    background-color: #57a2d4; /* Consistent button blue */
     color: white;
     padding: 10px;
     border: none;
     cursor: pointer;
-}
-/* Button Styles (for Adopt Now) */
-button:hover {
-    background-color: #ffffff; 
-    color: #57a2d4; /* Change text color on hover */
-    border: 1px solid #57a2d4; /* Add border on hover */
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
 }
 
+button:hover {
+    background-color: #ffffff; 
+    color: #57a2d4; /* Consistent button hover blue */
+    border: 1px solid #57a2d4; /* Consistent button hover border blue */
+}
 
 /* Footer Styles */
 footer {
@@ -119,10 +120,10 @@ footer {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    background-color: #5dade2;
+    background-color: #5dade2; /* Consistent footer blue */
     color: white;
     padding: 20px;
-    height: 100%; /* Set an explicit height */
+    height: 100%;
 }
 
 footer h2 {
@@ -132,104 +133,104 @@ footer h2 {
     color: white;
 }
 
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
 footer .footer-text {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: right;
-    text-align: center; /* Center text in footer */
-    /* text-align: left; Removed to avoid conflict with centering */
-    
-    }
+    align-items: center;
+    flex: 1;
+    height: 100%;
+    font-size: 15px;
+    text-align: center; /* Ensure text is centered */
+}
 
-    .footer-container {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        width: 100%;
-        max-width: 1200px;
-        margin: 0 auto;
-        gap: 24px;
-        flex-wrap: wrap;
-    }
+.contact-info {
+    text-align: left;
+    flex: 1;
+}
 
-    footer .footer-text {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        flex: 1;
-        height: 100%;
-        font-size: 15px;
-    }
+.google-map {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    min-width: 300px;
+    margin-top: 20px;
+}
 
-    .contact-info {
-        text-align: left;
-        flex: 1;
-    }
+footer iframe {
+    margin-left: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    width: 100%;
+    height: 100%;
+    border: 1px solid #585151;
+}
 
-    .google-map {
-        flex: 1;
-        display: flex;
-        justify-content: flex-end;
-        min-width: 300px;
-        margin-top: 20px;
-    }
-
-    footer iframe {
-        margin-left: 20px;
-        border-radius: 10px;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-        width: 100%;
-        height: 100%;
-        border: 1px solid #585151;
-    }
-
-    .container {
-        display: flex;
-        gap: 24px;
-        align-items: center;
-        justify-content: center;
-    }
+.container {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    justify-content: center;
+}
 
 /* Pet Card Styles */
 .pet-card {
-    background-color: #ffffff; /* White background for pet cards */
-    border: 2px solid #ddd; /* Light gray border */
-    border-radius: 10px; /* Rounded corners */
-    padding: 15px; /* Padding inside the card */
-    text-align: center; /* Center text inside the card */
-    width: 300px; /* Fixed width for consistency */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    background-color: #ffffff;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
+/* Applying 150x150px to .pet-card img with !important */
 .pet-card img {
-    width: 100%; /* Full width of the card */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 10px; /* Rounded corners for images */
+    width: 150px !important;
+    height: 150px !important;
+    border-radius: 10px;
+    object-fit: cover;
+    margin: 0 auto; /* Center the image within the card */
+    display: block; /* Ensures margin auto works */
 }
+
 .pet-card h3 {
-    margin: 10px 0; /* Space above and below the pet name */
-    font-size: 1.5em; /* Larger font size for pet names */
-    color: #333; /* Dark gray color for text */
+    margin: 10px 0;
+    font-size: 1.5em;
+    color: #333;
 }
+
 .pet-card p {
-    font-size: 1em; /* Standard font size for descriptions */
-    color: #666; /* Lighter gray for description text */
+    font-size: 1em;
+    color: #666;
 }
+
 .pet-card button {
-    background-color: #57a2d4; /* Match header background */
+    background-color: #57a2d4; /* Consistent button blue */
     color: white;
     padding: 10px;
     border: none;
     cursor: pointer;
-    border-radius: 5px; /* Rounded corners for buttons */
-}
-.pet-card button:hover {
-    background-color: #ffffff; /* Change background on hover */
-    color: #57a2d4; /* Change text color on hover */
-    border: 1px solid #57a2d4; /* Add border on hover */
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
 }
 
+.pet-card button:hover {
+    background-color: #ffffff;
+    color: #57a2d4; /* Consistent button hover blue */
+    border: 1px solid #57a2d4; /* Consistent button hover border blue */
+}
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
@@ -267,7 +268,7 @@ footer .footer-text {
 
 /* Slideshow container */
 .slideshow-container {
-    position: relative; /* Keep this */
+    position: relative;
     margin: auto;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
@@ -275,32 +276,30 @@ footer .footer-text {
 /* Hide the images by default */
 .mySlides {
     display: none;
-    /* Make mySlides the positioning context for its children (buttons) */
-    position: relative; 
-    width: 100%; /* Ensure it fills the container */
-    height: 450px; /* Default height for smaller screens */
-    overflow: hidden; /* Important if images are larger than this height */
+    position: relative;
+    width: 100%;
+    height: 450px;
+    overflow: hidden;
 }
 
 @media screen and (max-width: 768px) {
     .mySlides {
-        height: 300px; /* Smaller height for phones */
+        height: 300px;
     }
 }
 
 @media screen and (min-width: 1024px) {
     .mySlides {
-        height: 600px; /* Taller height for laptop screens */
+        height: 600px;
     }
 }
-
 
 /* Next & previous buttons */
 .prev, .next {
   cursor: pointer;
-  position: absolute; /* Now absolute relative to .mySlides */
+  position: absolute;
   top: 50%; 
-  transform: translateY(-50%); /* Perfect vertical centering */
+  transform: translateY(-50%);
   width: auto;
   height: 80px;
   padding: 16px;
@@ -313,18 +312,18 @@ footer .footer-text {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba(0,0,0,0.5); /* Make them slightly visible by default */
+  background-color: rgba(0,0,0,0.5);
 }
 
 /* Position the "previous button" to the left */
 .prev {
-  left: 0; /* Stick to the left edge of the .mySlides container */
+  left: 0;
   border-radius: 0 9px 9px 0; 
 }
 
 /* Position the "next button" to the right */
 .next {
-  right: 0; /* Stick to the right edge of the .mySlides container */
+  right: 0;
   border-radius: 9px 0 0 9px; 
 }
 
@@ -341,10 +340,10 @@ footer .footer-text {
 
 /* Image within the slide */
 .mySlides img{
-    width: 100%; /* Image fills its parent (.mySlides) */
-    height: 100%; /* Image takes full height of its parent (.mySlides) */
-    object-fit: cover; /* Ensures image covers the area, cropping if needed */
-    display: block; /* Removes any extra space below images */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
 @keyframes fade {
