@@ -8,7 +8,8 @@
 </head>
 <body>
     <header>
-        <h1>Welcome to Paws Bangkok Pet Store!</h1>
+        <h1>Welcome to Paws Bangkok</h1>
+        <h1>Pet Store!</h1>
         <nav>
         <ul>
             <a href="index.html">Home</a>
@@ -20,11 +21,22 @@
 
     <main>
         <section class="featured">
-            <h2>All Pets</h2>
+            <h2>Featured Pets</h2>
+            <div style="display: flex; justify-content: right; margin-bottom: 20px;">
+                Type:
+                <label><input type="checkbox" name="pet-type" value="Dog"> Dogs</label>
+                <label><input type="checkbox" name="pet-type" value="Cat"> Cats</label>
+                <label><input type="checkbox" name="pet-type" value="Capybara"> Capybaras</label>
+                <label><input type="checkbox" name="pet-type" value="Bird"> Birds</label>
+            </div>
             <!-- Container for dynamically loaded pet cards -->
             <div class="pet-list" id="pet-list">
                 <!-- Pet cards will be inserted here by JavaScript -->          
             </div>
+        </section>
+        <section class="contact">
+            <h2>Contact Us</h2>
+            <p>If you have any questions or inquiries, feel free to reach out to us!</p>
         </section>
     </main>
 

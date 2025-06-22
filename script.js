@@ -1,8 +1,9 @@
-function adoptPet(petName) {
-    const message = petName
-        ? `Adopted: ${petName}`
-        : "Adoption request!";
-    showYellowPopup(message);
+function adoptPet() {
+  const petName = $(this).siblings("h3").text();
+  const message = petName
+    ? `Adopted: ${petName}`
+    : "Adoption request!";
+  showYellowPopup(message);
 }
 
 function showYellowPopup(msg) {
