@@ -7,47 +7,65 @@ body {
     background-color: #e8f5fd; /* Very light blue background */
     color: #333; /* Dark gray text */
     scroll-behavior: smooth;
+    line-height: 1;
 }
 
 /* Header Styles */
 header {
     background-color: #5dade2; /* Example: your header background */
     color: white; /* Example: text color */
-    padding: 1em 0; /* Example: padding */
+    padding: 1.5em 0; /* Example: padding */
     text-align: center; /* This is the key property */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Subtle shadow for better readability */
 }
 
 header h1 {
     margin-bottom: 10px; /* Space below the heading */
-    font-size: 2.5em;
-    color: white;
+    font-size: 2.8em;
 }
 
-/* Navigation Styles */
+
 nav {
-    margin: 20px 0; /* Space above and below the nav */
+    display: flex;
+    justify-content: center; /* Center the nav horizontally */
+    align-items: center;     /* Vertically center if needed */
+    margin: 20px 0;          /* Increased margin for better spacing */
+}
+/* Navigation Styles */
+nav ul {
+    list-style: none;
+    display: flex; /* Use flexbox for horizontal layout */
+    justify-content: center; /* Center the nav items */
+    align-items: center;     /* Vertically center nav items */
+    gap: 24px;               /* Add space between nav items */
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    color: white; /* Text color for nav links */
+    text-decoration: none; /* Remove underline */
+    padding: 8px 16px;     /* Larger padding for better click area */
+    border-radius: 5px; /* Rounded corners for links */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+    font-size: 1.3em;
 }
 
 nav a:hover {
-    color: #BBDEFB; /* Lighter blue on hover for nav links */
+    background-color: #ffffff; /* Change background on hover */
+    color: #57a2d4; /* Change text color on hover */
 }
 
-header nav ul {
-    list-style: none; /* Remove bullet points */
-    padding: 0;
-    margin: 0;
-    display: inline-block; /* Makes the ul itself behave like text for centering */
-}
+/* Main Content Styles */
+main {
+    padding: 20px; /* Padding around the main content */
+    max-width: 1200px; /* Max width for main content */
+    margin: 0 auto; /* Center the main content */
+    background-color: #f0f8ff;
+ } 
 
-header nav ul a {
-    color: white;
-    text-decoration: none;
-    padding: 5px 15px;
-    display: inline-block; /* Make links behave like blocks for padding/margin, but still inline for centering */
-}
 
-/* Main Content Sections */
-
+ 
 
 /* Featured Section */
 .featured {
